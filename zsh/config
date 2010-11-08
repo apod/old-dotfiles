@@ -1,0 +1,109 @@
+# ===========
+# = General =
+# ===========
+setopt correct          # try to correct the spelling of command
+setopt correct_all      # try to correct the spelling of all arguments in line
+setopt complete_in_word # on completion the cursors stays after the last letter typed
+setopt brace_ccl        # use of {abc}d* is now allowed in expressions 
+
+autoload colors; colors
+
+
+# ===========
+# = History =
+# ===========
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+
+setopt HIST_VERIFY                       # history expansion before executing the line
+setopt EXTENDED_HISTORY                  # add timestamps to history
+setopt APPEND_HISTORY                    # adds history
+setopt INC_APPEND_HISTORY                # adds history incrementally 
+setopt SHARE_HISTORY                     # share histort across sessions
+setopt HIST_IGNORE_ALL_DUPS              # don't record dupes in history
+setopt HIST_REDUCE_BLANKS                # strip unnecessary whitespace
+
+# =============
+# = Processes =
+# =============
+REPORTTIME=10     # print elapsed time when more than 10 seconds
+
+setopt NO_BG_NICE # not nice background tasks
+setopt NO_HUP
+
+# =============
+# = Functions =
+# =============
+setopt LOCAL_OPTIONS    # allow functions to have local options
+setopt LOCAL_TRAPS      # allow functions to have local traps
+
+# Autoload zsh functions.
+fpath=(~/.dotfiles/zsh/functions ~/.dotfiles/zsh/functions/git_prompt $fpath)
+autoload -U ~/.dotfiles/zsh/functions/*(:t)
+autoload -U ~/.dotfiles/zsh/functions/git_prompt/*(:t)
+
+# Enable auto-execution of functions.
+typeset -ga preexec_functions
+typeset -ga precmd_functions
+typeset -ga chpwd_functions
+ 
+# Append git functions needed for prompt.
+preexec_functions+='preexec_update_git_vars'
+precmd_functions+='precmd_update_git_vars'
+chpwd_functions+='chpwd_update_git_vars'
+
+# ==========
+# = Prompt =
+# ==========
+setopt PROMPT_SUBST     # allow functions in prompt
+
+PROMPT='$(prompt_git_info)%{$fg[green]%}%(!.#.$)%{$reset_color%} '
+RPROMPT='%{$fg[blue]%}%2~ %{$fg[black]%}[%T]%{$reset_color%}'
+
+# ============
+# = Bindings =
+# ============
+bindkey -e  # emacs bindings
+
+bindkey -s '\el' "ls\n" # Esc-l list directory contents
+
+# History search with up and down arrow keys
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
+
+# Delete key should delete the forward character
+bindkey "^[[3~" delete-char
+
+# Shift + PgUp/PgDown to move through the history
+bindkey "^[[5~" up-line-or-history
+bindkey "^[[6~" down-line-or-history
+
+# Shift + Home / End to go the start or the end of the line
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F"  end-of-line
+
+bindkey "\ek" kill-whole-line # Esc-k delete the current line
+
+# Duplicate Terminal tab with Esc-d
+zle -N d
+bindkey '\ed' d
+
+# Edit command line in $EDITOR
+# autoload -U edit-command-line
+# zle -N edit-command-line
+# bindkey '\ee' edit-command-line 
+
+# Grep Coloring http://rubyurl.com/ZXv
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;31'
+
+# Set the Terminal title, http://tinyurl.com/5u9wfr
+case $TERM in (*xterm*|ansi)
+  function settab { print -Pn "\e]1;%n@%m: %~\a" }
+  function settitle { print -Pn "\e]2;%n: %~\a" }
+  function chpwd { settab; settitle }
+  settab; settitle
+  ;;
+esac

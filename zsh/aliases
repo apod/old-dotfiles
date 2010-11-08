@@ -1,0 +1,40 @@
+# General
+alias ll='ls -lah'        
+alias ..='cd ..'            # Move up 1 dir
+alias ...='cd ../..'        # Move up 2 dirs
+alias dl="curl -C - -O $1"  # Curl shortcut for download
+alias history='fc -l 1'     # Show history
+
+# Processes
+alias tu='top -o cpu'   # Sort by cpu usage
+alias tm='top -o vsize' # Sort by memory usage
+
+# Subversion
+alias svnclear='find . -name .svn -print0 | xargs -0 rm -rf' # Delete .svn folders recursively
+
+# Git
+alias gst='git status'
+alias gl='git pull'
+alias gp='git push'
+alias gdf='git difftool'
+alias gc='git commit'
+alias gcv='git commit -v'
+alias gca='git commit -v -a'
+alias gb='git branch'
+alias glog="git log --graph --pretty=format:'%an: %s - %Cred%h%Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+
+# Editors
+alias e='mate .'
+alias m='mvim'
+
+# Ruby
+alias att='autotest'
+
+# Ruby On Rails
+alias ss='./script/server'
+alias ssd='./script/server --debugger'
+alias sc='./script/console'
+alias sdb='./script/dbconsole'
+alias sg='./script/generate'
+alias sp='./script/plugin'

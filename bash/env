@@ -1,0 +1,31 @@
+# =====================
+# = General Variables =
+# =====================
+
+export CLICOLOR=1       # Terminal Coloring
+# export RUBYOPT=rubygems # Require rubygems by default on each ruby instance.
+
+# ===========
+# = History =
+# ===========
+
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+shopt -s histappend
+
+# =========
+# = Paths =
+# =========
+
+# Binary paths
+export PATH="~/.dotfiles/scripts:$PATH" # Load my scripts
+
+# Library paths
+
+# ====================
+# = Editor Variables =
+# ====================
+
+export EDITOR='mate -w'
+export GIT_EDITOR='mate -w'
+export SVN_EDITOR='mate -w'

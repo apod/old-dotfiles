@@ -1,0 +1,36 @@
+# Needs refactoring maybe rubyf
+case "$1" in 
+    git*)
+    export __EXECUTED_GIT_COMMAND=1
+    ;;
+    gst*)
+    export __EXECUTED_GIT_COMMAND=1
+    ;;
+    gl*)
+    export __EXECUTED_GIT_COMMAND=1
+    ;;
+    gp*)
+    export __EXECUTED_GIT_COMMAND=1
+    ;;
+    gc*)
+    export __EXECUTED_GIT_COMMAND=1
+    ;;
+    gb*)
+    export __EXECUTED_GIT_COMMAND=1
+    ;;
+    gca*)
+    export __EXECUTED_GIT_COMMAND=1
+    ;;
+    gcv*)
+    export __EXECUTED_GIT_COMMAND=1
+    ;;
+    grm*)
+    export __EXECUTED_GIT_COMMAND=1
+    ;;
+    rm*)
+    export __EXECUTED_GIT_COMMAND=1
+    ;;
+    touch*)
+    export __EXECUTED_GIT_COMMAND=1
+    ;;
+esac

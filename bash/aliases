@@ -1,0 +1,52 @@
+# General
+alias ll='ls -lah'        
+alias h='history'           # Shortcut for history
+alias hgrep="h | grep $1"   # Grep history by argument
+alias ..='cd ..'            # Move up 1 dir
+alias ...='cd ../..'        # Move up 2 dirs
+alias dl="curl -C - -O $1"  # Curl shortcut for download
+alias ql='qlmanage -p'      # Apple's quicklook
+
+# Processes
+alias tu='top -o cpu'   # Sort by cpu usage
+alias tm='top -o vsize' # Sort by memory usage
+
+# Subversion
+alias svnclear='find . -name .svn -print0 | xargs -0 rm -rf' # Delete .svn folders recursively
+
+# Git
+alias gst='git status'
+alias gl='git pull'
+alias gp='git push'
+alias gd='git diff | mate'
+alias gc='git commit'
+alias gcv='git commit -v'
+alias gca='git commit -v -a'
+alias gb='git branch'
+alias gba='git branch -a'
+alias glog="git log --graph --pretty=format:'%an: %s - %Cred%h%Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+
+# Editors
+alias e='mate . &'
+alias m='mvim'
+alias et='mate app config lib db public spec test vendor/plugins Rakefile Capfile README &'
+alias ett='mate app config lib db public script spec test vendor/plugins Rakefile Capfile README'
+
+# Ruby
+alias att='autotest'
+
+function cdgem {
+  cd $(gem environment gemdir)/gems
+  if [ $1 ]; then
+    cd `ls|grep -i $1|sort|tail -1`
+  fi  
+}
+
+# Ruby On Rails
+alias ss='./script/server'
+alias ssd='./script/server --debugger'
+alias sc='./script/console'
+alias sdb='./script/dbconsole'
+alias sg='./script/generate'
+alias sp='./script/plugin'
