@@ -5,6 +5,8 @@ My config files to setup my system.
 == Installation
 
   git clone git://github.com/apod/dotfiles ~/.dotfiles
+  git submodule init
+  git submodule update
   ln -s ~/.dotfiles/zshrc .zshrc
   ln -s ~/.dotfiles/vim/vimrc .vimrc
   ln -s ~/.dotfiles/vim .vim
