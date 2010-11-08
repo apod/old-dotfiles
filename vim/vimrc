@@ -99,7 +99,7 @@ endif
 " Plugins
 
 " NERD Tree
-" nmap <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+nmap <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
 " Fuzzy Finder
 " nmap <leader>b :FufBuffer<CR>
