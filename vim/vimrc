@@ -1,6 +1,10 @@
 " Forget being compatible with good ol' vi
 set nocompatible
 
+" Pathogen initialization
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
