@@ -9,3 +9,6 @@
 
 # completion: Configuration for completion
 . ~/.dotfiles/zsh/completion
+
+# This loads RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
