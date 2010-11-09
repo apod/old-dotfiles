@@ -49,6 +49,9 @@ set cpoptions+=$
 " Default whitespace for all files
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
+" Vim should always run from the shell (RVM Support)
+set shell=/bin/sh
+
 " Enable spellchecking for txt files
 autocmd FileType txt set spell spelllang=en,el
 
