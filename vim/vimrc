@@ -84,7 +84,7 @@ if has("gui_macvim")
 	set guifont=AnonymousPro:h13 " Change font
 
 	" Change color scheme for ruby files
-	autocmd FileType ruby,eruby colorscheme railscasts
+	" autocmd FileType ruby,eruby colorscheme railscasts
 	" Default dimensions for a new window
 	set lines=80 columns=120
 
