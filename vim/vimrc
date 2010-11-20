@@ -107,5 +107,12 @@ endif
 " NERD Tree
 nmap <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
+" NERD Commenter
+" Add an extra space after the left delimeter
+let NERDSpaceDelims=1
+
+" Command-/ to toggle comments
+map <D-/> <plug>NERDCommenterToggle<CR>
+
 " Fuzzy Finder
 " nmap <leader>b :FufBuffer<CR>
