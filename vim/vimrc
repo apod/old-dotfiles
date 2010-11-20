@@ -90,7 +90,7 @@ if has("gui_macvim")
 
 	" Full screen options for capturing full horizontal and vertical space
 	set fuoptions=maxvert,maxhorz
-	map <leader>f :set fullscreen!<CR>
+	map <leader>fu :set fullscreen!<CR>
 
 	" GUI customization
 	set go-=T " Remove toolbar
@@ -116,3 +116,6 @@ map <D-/> <plug>NERDCommenterToggle<CR>
 
 " Fuzzy Finder
 nmap <leader>b :FufBuffer<CR>
+
+" Ack
+map <leader>F :Ack<space>
