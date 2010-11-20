@@ -97,6 +97,9 @@ if has("gui_macvim")
 	" Remove vertical scrolling from both sides
 	set guioptions-=r
 	set guioptions-=L
+
+	" Transparency
+	set transparency=5
 endif
 
 " Plugins
