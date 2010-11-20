@@ -115,4 +115,4 @@ let NERDSpaceDelims=1
 map <D-/> <plug>NERDCommenterToggle<CR>
 
 " Fuzzy Finder
-" nmap <leader>b :FufBuffer<CR>
+nmap <leader>b :FufBuffer<CR>
