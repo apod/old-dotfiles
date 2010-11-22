@@ -31,3 +31,6 @@
 [submodule "vim/bundle/rails"]
 	path = vim/bundle/rails
 	url = https://github.com/tpope/vim-rails.git
+[submodule "vim/bundle/lustyjuggler"]
+	path = vim/bundle/lustyjuggler
+	url = https://github.com/vim-scripts/LustyJuggler.git

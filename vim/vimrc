@@ -114,8 +114,8 @@ let NERDSpaceDelims=1
 " Command-/ to toggle comments
 map <D-/> <plug>NERDCommenterToggle<CR>
 
-" Fuzzy Finder
-" nmap <leader>b :FufBuffer<CR>
+" Lusty Juggler
+nmap <leader>b :LustyJuggler<CR>
 
 " Ack
 map <leader>F :Ack<space>
