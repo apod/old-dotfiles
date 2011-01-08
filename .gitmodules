@@ -34,3 +34,6 @@
 [submodule "vim/bundle/lustyjuggler"]
 	path = vim/bundle/lustyjuggler
 	url = https://github.com/vim-scripts/LustyJuggler.git
+[submodule "vim/bundle/arduino_syntax"]
+	path = vim/bundle/arduino_syntax
+	url = https://github.com/vim-scripts/Arduino-syntax-file.git
