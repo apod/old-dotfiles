@@ -37,3 +37,6 @@
 [submodule "vim/bundle/arduino_syntax"]
 	path = vim/bundle/arduino_syntax
 	url = https://github.com/vim-scripts/Arduino-syntax-file.git
+[submodule "vim/bundle/tabular"]
+	path = vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
