@@ -52,8 +52,10 @@ set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 " Vim should always run from the shell (RVM Support)
 set shell=/bin/sh
 
-" Recognize pde files as arduino files
+" Custom syntaxes
 autocmd BufNewFile,BufRead *.pde setlocal ft=arduino
+autocmd BufNewFile,BufRead *.io setlocal ft=io
+
 
 " Enable spellchecking for txt files
 autocmd FileType txt set spell spelllang=en,el
