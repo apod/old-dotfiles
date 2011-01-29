@@ -43,3 +43,6 @@
 [submodule "vim/bundle/Io_syntax"]
 	path = vim/bundle/Io_syntax
 	url = https://github.com/vim-scripts/Io-programming-language-syntax.git
+[submodule "vim/bundle/prolog"]
+	path = vim/bundle/prolog
+	url = https://github.com/adimit/prolog.vim.git
