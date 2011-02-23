@@ -125,6 +125,9 @@ nmap <leader>b :LustyJuggler<CR>
 " Ack
 map <leader>F :Ack<space>
 
+" Gundo
+nnoremap <F5> :GundoToggle<CR>
+
 " Source local machine configurations
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
