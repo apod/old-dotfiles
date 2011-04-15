@@ -8,7 +8,7 @@ export CLICOLOR=1       # Terminal Coloring
 # =========
 
 # Binary paths
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # My Scripts
 export PATH="/Users/alex/.dotfiles/scripts:$PATH" # Load my scripts
