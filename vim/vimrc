@@ -118,6 +118,9 @@ nmap <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 " Add an extra space after the left delimeter
 let NERDSpaceDelims=1
 
+" Use // for C/C++ comments
+let NERD_c_alt_style=1
+
 " Command-/ to toggle comments
 map <D-/> <plug>NERDCommenterToggle<CR>
 
