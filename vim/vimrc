@@ -130,6 +130,11 @@ map <leader>F :Ack<space>
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
+" Taglist
+nmap <leader>s :TlistToggle<CR>
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+
 " Solarized Background Toggle
 call togglebg#map("<F6>")
 
