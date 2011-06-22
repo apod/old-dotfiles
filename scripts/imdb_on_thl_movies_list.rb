@@ -3,6 +3,7 @@ require 'appscript'
 require 'imdb'
 
 thl = Appscript.app("The Hit List")
+# Get the Movies list thats inside the Various folder
 movies_group = thl.folders_group.groups["Various"].groups["Movies"].get
 genres = movies_group.tasks.get
 
