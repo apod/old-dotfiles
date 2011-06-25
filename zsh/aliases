@@ -38,3 +38,6 @@ alias sc='./script/console'
 alias sdb='./script/dbconsole'
 alias sg='./script/generate'
 alias sp='./script/plugin'
+
+# LÖVE
+alias love="/Applications/Game\ Development/love/love.app/Contents/MacOS/love"
