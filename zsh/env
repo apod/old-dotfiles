@@ -10,11 +10,14 @@ export CLICOLOR=1       # Terminal Coloring
 # Binary paths
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
+# Python binaries with brew
+export PATH="/usr/local/share/python:$PATH"
+
 # My Scripts
 export PATH="/Users/alex/.dotfiles/scripts:$PATH" # Load my scripts
 
 # Library paths
-export PYTHONPATH="/usr/local/Cellar/python/2.7/lib/python2.7/site-packages:$PYTHONPATH"
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 # ====================
 # = Editor Variables =
