@@ -79,15 +79,13 @@ nmap <C-k> :m-2<CR>
 imap <C-k> <Esc>:m-2<CR>
 vmap <C-k> :m-2<CR>gv
 
-" Set colorscheme to solarized for terminal
-set background=light
-colorscheme solarized
+" Set colorscheme for terminal
+colorscheme monokai_customized
 
 " If there is a GUI
 if has("gui_macvim")
 	" Set the colorscheme
-	set background=light
-	colorscheme solarized
+	" colorscheme monokai_customized
 	set guifont=AnonymousPro:h13 " Change font
 
 	" Change color scheme for ruby files
@@ -139,7 +137,7 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 
 " Solarized Background Toggle
-call togglebg#map("<F6>")
+" call togglebg#map("<F6>")
 
 " Source local machine configurations
 if filereadable(expand("~/.vimrc.local"))
