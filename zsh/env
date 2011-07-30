@@ -18,6 +18,7 @@ export PATH="/Users/alex/.dotfiles/scripts:$PATH" # Load my scripts
 
 # Library paths
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 
 # ====================
 # = Editor Variables =
